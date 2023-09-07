@@ -10,9 +10,8 @@ const PersonalInfo = ({
   address,
 }) => {
   return (
-    <form className="personalInfo">
-      <h2>Personal Details</h2>
-      <h3>Name</h3>
+    <form className="section personalInfo">
+      <h2>Name</h2>
       <InputGroup
         id="full-name"
         type="text"
@@ -21,7 +20,7 @@ const PersonalInfo = ({
         onChange={onChange}
         data-key="fullName"
       />
-      <h3>Title</h3>
+      <h2>Title</h2>
       <InputGroup
         id="title"
         type="text"
@@ -30,7 +29,7 @@ const PersonalInfo = ({
         onChange={onChange}
         data-key="title"
       />
-      <h3>Email</h3>
+      <h2>Email</h2>
       <InputGroup
         id="email"
         type="email"
@@ -39,7 +38,7 @@ const PersonalInfo = ({
         onChange={onChange}
         data-key="email"
       />
-      <h3>Phone Number</h3>
+      <h2>Phone Number</h2>
       <InputGroup
         id="phone-number"
         type="text"
@@ -48,7 +47,7 @@ const PersonalInfo = ({
         onChange={onChange}
         data-key="phoneNumber"
       />
-      <h3>Address</h3>
+      <h2>Address</h2>
       <InputGroup
         id="address"
         type="text"

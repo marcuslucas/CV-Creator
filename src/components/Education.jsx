@@ -3,7 +3,7 @@ import { useState } from "react";
 import InputGroup from "./InputGroup";
 
 const Education = ({ onSubmit }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const [educationFormData, setEducationFormData] = useState({
     school: "",
     degree: "",
@@ -23,11 +23,11 @@ const Education = ({ onSubmit }) => {
   };
 
   return (
-    <form className="education" onSubmit={handleFormSubmit}>
+    <form className="section education" onSubmit={handleFormSubmit}>
       <h2>School</h2>
-      <button onClick={() => setIsVisible((prev) => !prev)}>
+      {/* <button onClick={() => setIsVisible((prev) => !prev)}>
         {isVisible ? "Close" : "Open"}
-      </button>
+      </button> */}
       {isVisible && (
         <div>
           <InputGroup

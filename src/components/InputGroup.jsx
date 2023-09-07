@@ -11,16 +11,20 @@ const InputGroup = ({
   return (
     <div>
       {type === "textarea" ? (
-        <textarea
-          id={id}
-          placeholder={placeholder}
-          onChange={onChange}
-          value={value}
-          data-key={dataKey}
-        ></textarea>
+        <div className="input-group">
+          <textarea
+            id={id}
+            placeholder={placeholder}
+            onChange={onChange}
+            value={value}
+            data-key={dataKey}
+            className="input-group-input"
+          ></textarea>
+        </div>
       ) : (
         <div className="input-group">
           <input
+            className="input-group-input"
             type={type}
             id={id}
             placeholder={placeholder}

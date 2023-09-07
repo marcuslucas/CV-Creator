@@ -3,7 +3,7 @@ import InputGroup from "./InputGroup";
 import { useState } from "react";
 
 const Experience = ({ onSubmit }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const [experienceFormData, setExperienceFormData] = useState({
     company: "",
     positionTitle: "",
@@ -23,11 +23,11 @@ const Experience = ({ onSubmit }) => {
   };
 
   return (
-    <form className="experience" onSubmit={handleFormSubmit}>
+    <form className="section experience" onSubmit={handleFormSubmit}>
       <h2>Company</h2>
-      <button onClick={() => setIsVisible((prev) => !prev)}>
+      {/* <button onClick={() => setIsVisible((prev) => !prev)}>
         {isVisible ? "Close" : "Open"}
-      </button>
+      </button> */}
       {isVisible && (
         <div>
           <InputGroup
@@ -65,14 +65,14 @@ const Experience = ({ onSubmit }) => {
             onChange={handleInputChange}
             data-key="endDateExperience"
           />
-          <InputGroup
+          {/* <InputGroup
             id="description"
             type="textarea"
             placeholder="Enter job description"
             value={experienceFormData.description}
             onChange={handleInputChange}
             data-key="description"
-          />
+          /> */}
           <button type="submit">Submit</button>
         </div>
       )}
